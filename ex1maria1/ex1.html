@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampe Numérique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="conteneur">
+        <img class="lamp" id="lampe" src="lampOf.jpg" alt="Lampe éteinte">
+        <button id="toggleButton" onclick="toggleLamp()">
+            <img id="ma-photo" src="OIP.jpg" width="90" height="90" alt="Bouton de changement de lampe">
+        </button>
+    </div>
+    <audio id="clickSound" src="tok.mp3"></audio>
+    <script>
+       function toggleLamp() {
+    const lampElement = document.getElementById('lampe');
+    const lampOffSrc = 'lampOf.jpg';
+    const lampOnSrc = 'lampOn.jpg';
+    
+    if (lampElement.src.includes(lampOffSrc)) {
+        lampElement.src = lampOnSrc; 
+    } else {
+        lampElement.src = lampOffSrc; 
+    }
+    document.getElementById('clickSound').play();
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+
+.conteneur {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lampe {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
